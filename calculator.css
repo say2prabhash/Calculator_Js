@@ -3,6 +3,7 @@ body,html{
 	padding: 0;
 	display: flex;
 	justify-content: center;
+	padding-top: 20px;
 }
 #main-container{
 	display: flex;
