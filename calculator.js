@@ -12,10 +12,6 @@ $(document).ready(function(){
 					operand1= + val;
 					val="";
 				}
-				// else if(operand2==null && result==null)
-				// {
-					
-				// }
 				else
 				{
 					operand1=result;
@@ -119,41 +115,59 @@ $(document).ready(function(){
 			count=0;
 		});
 		$("#minus").click(function(){
-				if(operations!="")
+				if(operations!="" && operand2!=null)
 				{
 					performOperation();
 				}
-				else
+				else if(operations=="")
 				{
 				operations="-";
 				$("#displayBox").attr("value",operations);
 				assigningValues();
+				val="";
+			}
+			else 
+			{
+				assigningValues();
+				performOperation();
 			}
 			count=0;
 		});
 		$("#multiply").click(function(){
-				if(operations!="")
+				if(operations!="" && operand2!=null)
 				{
 					performOperation();
 				}
-				else
+				else if(operations=="")
 				{
 				operations="*";
 				$("#displayBox").attr("value",operations);
 				assigningValues();
+				val="";
+			}
+			else 
+			{
+				assigningValues();
+				performOperation();
 			}
 			count=0;
 		});
 		$("#division").click(function(){
-				if(operations!="")
+				if(operations!="" && operand2!=null)
 				{
 					performOperation();
 				}
-				else
+				else if(operations=="")
 				{
 				operations="/";
 				$("#displayBox").attr("value",operations);
 				assigningValues();
+				val="";
+			}
+			else 
+			{
+				assigningValues();
+				performOperation();
 			}
 			count=0;
 		});
