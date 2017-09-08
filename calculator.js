@@ -19,33 +19,9 @@ $(document).ready(function(){
 	}
 	function performOperation()
 	{
-		if(operations=="+")
-		{
-			result=operand1+operand2;
-			$("#displayBox").attr("value",result);
-		}
-		else if(operations=="-")
-		{
-			result=operand1-operand2;
-			$("#displayBox").attr("value",result);
-		}
-		else if(operations=="*")
-		{
-			result=operand1*operand2;
-			$("#displayBox").attr("value",result);
-		}
-		else if(operations=="/")
-		{
-			if(operand2!=0)
-			{
-			result=operand1/operand2;
-			$("#displayBox").attr("value",result);
-			}
-		else
-		{
-			$("#displayBox").attr("value","Error");
-		}
-		}
+		var str=operand1+operations+operand2;
+		result=eval(str);
+		$("#displayBox").attr("value",result);
 		operations="";
 		count=0;
 		operand2=null;
